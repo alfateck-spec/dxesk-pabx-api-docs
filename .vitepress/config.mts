@@ -9,6 +9,11 @@ export default defineConfig({
   lastUpdated: true,
 
   head: [
+    [
+      'script',
+      {},
+      "try{localStorage.getItem('vitepress-theme-appearance')||localStorage.setItem('vitepress-theme-appearance','light')}catch(e){}",
+    ],
     ['link', { rel: 'preconnect', href: 'https://fonts.googleapis.com' }],
     ['link', { rel: 'preconnect', href: 'https://fonts.gstatic.com', crossorigin: '' }],
     [
